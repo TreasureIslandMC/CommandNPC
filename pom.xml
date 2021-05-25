@@ -17,6 +17,7 @@
         <citizensapi.version>2.0.27-SNAPSHOT</citizensapi.version>
         <vault.version>1.7</vault.version>
         <placeholderapi.version>2.10.9</placeholderapi.version>
+        <bstats.version>2.2.1</bstats.version>
     </properties>
 
     <repositories>
@@ -69,10 +70,16 @@
             <version>${placeholderapi.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>${bstats.version}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     
     <build>
-        <defaultGoal>clean install</defaultGoal>
+        <defaultGoal>clean package</defaultGoal>
         <sourceDirectory>src/main/java</sourceDirectory>
         <finalName>${project.name}-${project.version}</finalName>
 
@@ -91,7 +98,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -116,7 +123,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -124,6 +131,12 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>me.messageofdeath.commandnpc</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>

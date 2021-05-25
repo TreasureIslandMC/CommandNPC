@@ -11,12 +11,12 @@ import me.messageofdeath.commandnpc.Listeners.NPCListener;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCDataManager;
 import me.messageofdeath.commandnpc.Utilities.BungeeCord.BungeeCordUtil;
 import me.messageofdeath.commandnpc.Utilities.CitizenBackend.CitizenCommandRegister;
-import me.messageofdeath.commandnpc.Utilities.Metrics.Metrics;
 import me.messageofdeath.commandnpc.Utilities.queue.QueueSystem;
 import me.messageofdeath.commandnpc.commands.CitizenCommands;
 import me.messageofdeath.commandnpc.commands.ReloadCommand;
 import net.milkbowl.vault.economy.Economy;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,7 +44,7 @@ public class CommandNPC extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		CommandNPC.queueSystem = new QueueSystem(1);
-		new Metrics(this);
+		new Metrics(this,833);
 		LanguageConfiguration langConfig = new LanguageConfiguration(this);
 		langConfig.initConfiguration();
 		langConfig.loadConfiguration();
