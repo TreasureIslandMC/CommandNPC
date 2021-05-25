@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Utilities.CooldownManager;
+package me.messageofdeath.commandnpc.utilities.cooldownmanager;
 
 import java.util.ArrayList;
 import java.util.UUID;

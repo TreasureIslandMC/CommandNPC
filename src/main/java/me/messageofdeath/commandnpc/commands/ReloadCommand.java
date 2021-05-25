@@ -7,9 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.Database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginSettings;
-import me.messageofdeath.commandnpc.Utilities.BungeeCord.BungeeCordUtil;
+import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.utilities.bungeecord.BungeeCordUtil;
 import org.jetbrains.annotations.NotNull;
 
 public class ReloadCommand implements CommandExecutor {

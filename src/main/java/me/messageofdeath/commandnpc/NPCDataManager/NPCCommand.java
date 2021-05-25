@@ -1,6 +1,6 @@
 package me.messageofdeath.commandnpc.NPCDataManager;
 
-import me.messageofdeath.commandnpc.Database.ClickType;
+import me.messageofdeath.commandnpc.database.ClickType;
 
 public class NPCCommand {
 

@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Utilities.BungeeCord;
+package me.messageofdeath.commandnpc.utilities.bungeecord;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;

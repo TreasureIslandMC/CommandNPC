@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Database;
+package me.messageofdeath.commandnpc.database;
 
 public enum ClickType {
 	

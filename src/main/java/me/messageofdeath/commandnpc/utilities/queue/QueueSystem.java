@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Utilities.queue;
+package me.messageofdeath.commandnpc.utilities.queue;
 
 import java.util.LinkedList;
 

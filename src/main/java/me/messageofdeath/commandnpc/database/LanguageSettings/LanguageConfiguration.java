@@ -1,7 +1,7 @@
-package me.messageofdeath.commandnpc.Database.LanguageSettings;
+package me.messageofdeath.commandnpc.database.LanguageSettings;
 
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.Database.YamlDatabase;
+import me.messageofdeath.commandnpc.database.YamlDatabase;
 
 public class LanguageConfiguration {
 	

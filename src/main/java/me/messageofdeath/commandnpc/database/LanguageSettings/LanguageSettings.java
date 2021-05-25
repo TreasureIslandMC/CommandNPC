@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Database.LanguageSettings;
+package me.messageofdeath.commandnpc.database.LanguageSettings;
 
 public enum LanguageSettings {
 	

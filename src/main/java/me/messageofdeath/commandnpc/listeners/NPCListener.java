@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Listeners;
+package me.messageofdeath.commandnpc.listeners;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,14 +7,14 @@ import java.util.UUID;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.Database.ClickType;
-import me.messageofdeath.commandnpc.Database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.database.ClickType;
+import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCCommand;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCData;
-import me.messageofdeath.commandnpc.Utilities.BungeeCord.BungeeCordUtil;
-import me.messageofdeath.commandnpc.Utilities.CooldownManager.Cooldown;
-import me.messageofdeath.commandnpc.Utilities.CooldownManager.CooldownManager;
+import me.messageofdeath.commandnpc.utilities.bungeecord.BungeeCordUtil;
+import me.messageofdeath.commandnpc.utilities.cooldownmanager.Cooldown;
+import me.messageofdeath.commandnpc.utilities.cooldownmanager.CooldownManager;
 import net.citizensnpcs.api.event.NPCLeftClickEvent;
 import net.citizensnpcs.api.event.NPCRemoveEvent;
 import net.citizensnpcs.api.event.NPCRightClickEvent;

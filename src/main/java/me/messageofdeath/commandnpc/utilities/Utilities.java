@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Utilities;
+package me.messageofdeath.commandnpc.utilities;
 
 import java.util.ArrayList;
 import java.util.Comparator;

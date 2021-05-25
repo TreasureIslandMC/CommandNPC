@@ -1,9 +1,9 @@
-package me.messageofdeath.commandnpc.Database;
+package me.messageofdeath.commandnpc.database;
 
 import java.util.ArrayList;
 
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCCommand;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCData;
 

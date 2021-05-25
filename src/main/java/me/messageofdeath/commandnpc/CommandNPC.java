@@ -2,16 +2,16 @@ package me.messageofdeath.commandnpc;
 
 import java.util.ArrayList;
 
-import me.messageofdeath.commandnpc.Database.CommandDatabase;
-import me.messageofdeath.commandnpc.Database.LanguageSettings.LanguageConfiguration;
-import me.messageofdeath.commandnpc.Database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginConfiguration;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginSettings;
-import me.messageofdeath.commandnpc.Listeners.NPCListener;
+import me.messageofdeath.commandnpc.database.CommandDatabase;
+import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageConfiguration;
+import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginConfiguration;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.listeners.NPCListener;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCDataManager;
-import me.messageofdeath.commandnpc.Utilities.BungeeCord.BungeeCordUtil;
-import me.messageofdeath.commandnpc.Utilities.CitizenBackend.CitizenCommandRegister;
-import me.messageofdeath.commandnpc.Utilities.queue.QueueSystem;
+import me.messageofdeath.commandnpc.utilities.bungeecord.BungeeCordUtil;
+import me.messageofdeath.commandnpc.utilities.citizenbackend.CitizenCommandRegister;
+import me.messageofdeath.commandnpc.utilities.queue.QueueSystem;
 import me.messageofdeath.commandnpc.commands.CitizenCommands;
 import me.messageofdeath.commandnpc.commands.ReloadCommand;
 import net.milkbowl.vault.economy.Economy;

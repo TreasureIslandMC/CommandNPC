@@ -1,6 +1,6 @@
-package me.messageofdeath.commandnpc.Database.PluginSettings;
+package me.messageofdeath.commandnpc.database.PluginSettings;
 
-import me.messageofdeath.commandnpc.Utilities.Utilities;
+import me.messageofdeath.commandnpc.utilities.Utilities;
 
 public enum PluginSettings {
 	

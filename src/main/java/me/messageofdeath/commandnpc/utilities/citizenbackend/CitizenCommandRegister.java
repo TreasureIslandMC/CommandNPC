@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.Utilities.CitizenBackend;
+package me.messageofdeath.commandnpc.utilities.citizenbackend;
 
 import java.lang.reflect.Field;
 
