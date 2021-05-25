@@ -3,10 +3,10 @@ package me.messageofdeath.commandnpc;
 import java.util.ArrayList;
 
 import me.messageofdeath.commandnpc.database.CommandDatabase;
-import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageConfiguration;
-import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.database.PluginSettings.PluginConfiguration;
-import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.database.settings.language.LanguageConfiguration;
+import me.messageofdeath.commandnpc.database.settings.language.LanguageSettings;
+import me.messageofdeath.commandnpc.database.settings.plugin.PluginConfiguration;
+import me.messageofdeath.commandnpc.database.settings.plugin.PluginSettings;
 import me.messageofdeath.commandnpc.listeners.NPCListener;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCDataManager;
 import me.messageofdeath.commandnpc.utilities.bungeecord.BungeeCordUtil;

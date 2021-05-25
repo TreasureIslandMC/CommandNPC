@@ -1,4 +1,4 @@
-package me.messageofdeath.commandnpc.database.PluginSettings;
+package me.messageofdeath.commandnpc.database.settings.plugin;
 
 import me.messageofdeath.commandnpc.utilities.Utilities;
 

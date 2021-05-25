@@ -7,8 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.database.settings.language.LanguageSettings;
+import me.messageofdeath.commandnpc.database.settings.plugin.PluginSettings;
 import me.messageofdeath.commandnpc.utilities.bungeecord.BungeeCordUtil;
 import org.jetbrains.annotations.NotNull;
 

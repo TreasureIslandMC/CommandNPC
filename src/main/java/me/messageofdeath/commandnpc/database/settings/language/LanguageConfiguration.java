@@ -1,29 +1,29 @@
-package me.messageofdeath.commandnpc.database.PluginSettings;
+package me.messageofdeath.commandnpc.database.settings.language;
 
 import me.messageofdeath.commandnpc.CommandNPC;
 import me.messageofdeath.commandnpc.database.YamlDatabase;
 
-public class PluginConfiguration {
+public class LanguageConfiguration {
 	
 	protected final CommandNPC instance;
 	private YamlDatabase config;
 
-	public PluginConfiguration(CommandNPC instance) {
+	public LanguageConfiguration(CommandNPC instance) {
 		this.instance = instance;
 	}
 
 	public void initConfiguration() {
-		this.config = new YamlDatabase(this.instance, "config", false);
+		this.config = new YamlDatabase(this.instance, "language", false);
 		this.config.onStartUp();
 		this.config.saveOnSet = false;
 		boolean changes = false;
-		for (PluginSettings setting : PluginSettings.values()) {
+		for(LanguageSettings setting : LanguageSettings.values()) {
 			if (!this.config.contains(setting.getName().replace("_", "."))) {
 				changes = true;
 				this.config.set(setting.getName().replace("_", "."), setting.getDefaultSetting());
 			}
 		}
-		if (changes) {
+		if(changes) {
 			this.config.save();
 		}
 		this.config.saveOnSet = true;
@@ -34,7 +34,7 @@ public class PluginConfiguration {
 	}
 
 	public void loadConfiguration() {
-		for (PluginSettings setting : PluginSettings.values()) {
+		for(LanguageSettings setting : LanguageSettings.values()) {
 			setting.setSetting(this.config.getString(setting.getName().replace("_", "."), setting.getDefaultSetting()));
 		}
 	}
