@@ -89,8 +89,6 @@ public class NPCData {
 	}
 	
 	private static Comparator<NPCCommand> comparePosition() {
-		return (cmd1, cmd2) -> {
-			return Integer.compare(cmd1.getID(), cmd2.getID());
-		};
+		return Comparator.comparingInt(NPCCommand::getID);
 	}
 }

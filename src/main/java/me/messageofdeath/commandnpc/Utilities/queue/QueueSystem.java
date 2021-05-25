@@ -4,7 +4,8 @@ import java.util.LinkedList;
 
 public class QueueSystem {
 
-    private volatile boolean stop, interrupt;
+    private volatile boolean stop;
+    private volatile boolean interrupt;
     private final QueueExecutor[] threads;
     private final LinkedList<Runnable> queue;
 

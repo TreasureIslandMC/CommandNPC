@@ -127,8 +127,6 @@ public class Utilities {
 	}
 	
 	private static Comparator<IDHolder> compareIDs() {
-		return (holder1, holder2) -> {
-			return Integer.compare(holder1.getID(), holder2.getID());
-		};
+		return Comparator.comparingInt(IDHolder::getID);
 	}
 }
