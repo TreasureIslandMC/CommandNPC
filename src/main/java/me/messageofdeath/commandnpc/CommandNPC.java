@@ -146,16 +146,16 @@ public class CommandNPC extends JavaPlugin {
 		String text = "&cTopic";
 		topic = "&c" + topic;
 		log("&4---------------------&b{&2CommandNPC &cError&b}&4---------------------", false);
-		log(space.substring((space.length() + text.length()) / 2, space.length()) + text, false);
-		log(space.substring((space.length() + topic.length()) / 2, space.length()) + topic, false);
+		log(space.substring((space.length() + text.length()) / 2) + text, false);
+		log(space.substring((space.length() + topic.length()) / 2) + topic, false);
 		log("", false);
 		for (String s : getLines(error, space)) {
-			log("&b" + space.substring((space.length() + s.length()) / 2, space.length()) + s, false);
+			log("&b" + space.substring((space.length() + s.length()) / 2) + s, false);
 		}
 		log("", false);
 		String cl = "&8Class: &c" + classx + "   &8Method: &c" + method;
 		for (String s : getLines(cl, space)) {
-			log("&c" + space.substring((space.length() + s.length()) / 2, space.length()) + s, false);
+			log("&c" + space.substring((space.length() + s.length()) / 2) + s, false);
 		}
 		log("", false);
 		log("&4---------------------&b{&2CommandNPC &cError&b}&4---------------------", false);

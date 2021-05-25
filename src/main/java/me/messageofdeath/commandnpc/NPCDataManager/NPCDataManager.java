@@ -1,6 +1,7 @@
 package me.messageofdeath.commandnpc.NPCDataManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NPCDataManager {
 
@@ -35,9 +36,7 @@ public class NPCDataManager {
 		return null;
 	}
 	
-	public ArrayList<NPCData> getNPCDatas() {
-		ArrayList<NPCData> data = new ArrayList<>();
-		data.addAll(this.data);
-		return data;
+	public List<NPCData> getNPCDatas() {
+		return new ArrayList<>(this.data);
 	}
 }

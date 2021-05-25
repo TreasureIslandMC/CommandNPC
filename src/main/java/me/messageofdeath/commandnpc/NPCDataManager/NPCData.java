@@ -90,13 +90,7 @@ public class NPCData {
 	
 	private static Comparator<NPCCommand> comparePosition() {
 		return (cmd1, cmd2) -> {
-            if (cmd1.getID() > cmd2.getID()) {
-                return 1;
-            }
-            if (cmd1.getID() < cmd2.getID()) {
-                return -1;
-            }
-            return 0;
-        };
+			return Integer.compare(cmd1.getID(), cmd2.getID());
+		};
 	}
 }

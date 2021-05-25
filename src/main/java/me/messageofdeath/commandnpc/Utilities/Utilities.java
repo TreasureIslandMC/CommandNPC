@@ -128,13 +128,7 @@ public class Utilities {
 	
 	private static Comparator<IDHolder> compareIDs() {
 		return (holder1, holder2) -> {
-            if (holder1.getID() > holder2.getID()) {
-                return 1;
-            }
-            if (holder1.getID() < holder2.getID()) {
-                return -1;
-            }
-            return 0;
-        };
+			return Integer.compare(holder1.getID(), holder2.getID());
+		};
 	}
 }

@@ -7,16 +7,16 @@
     <groupId>me.messageofdeath</groupId>
     <artifactId>commandnpc</artifactId>
     <name>CommandNPC</name>
-    <version>1.9.1</version>
+    <version>1.9.1-TI</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.8</jdk.version>
-        <bukkit.version>1.12-R0.1-SNAPSHOT</bukkit.version>
-        <citizensapi.version>2.0.22-SNAPSHOT</citizensapi.version>
-        <vault.version>1.6</vault.version>
-        <placeholderapi.version>2.0.8</placeholderapi.version>
+        <jdk.version>11</jdk.version>
+        <bukkit.version>1.16.5-R0.1-SNAPSHOT</bukkit.version>
+        <citizensapi.version>2.0.27-SNAPSHOT</citizensapi.version>
+        <vault.version>1.7</vault.version>
+        <placeholderapi.version>2.10.9</placeholderapi.version>
     </properties>
 
     <repositories>
@@ -45,12 +45,12 @@
             <version>${bukkit.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
             <version>${bukkit.version}</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
             <artifactId>VaultAPI</artifactId>

@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +30,7 @@ import java.util.zip.GZIPOutputStream;
  * bStats collects some data for plugin authors.
  *
  * Check out https://bStats.org/ to learn more about bStats!
+ * TODO: Shade this instead, or remove entirely
  */
 public class Metrics {
 
@@ -146,12 +148,7 @@ public class Metrics {
                 }
                 // Nevertheless we want our code to run in the Bukkit main thread, so we have to use the Bukkit scheduler
                 // Don't be afraid! The connection to the bStats server is still async, only the stats collection is sync ;)
-                Bukkit.getScheduler().runTask(plugin, new Runnable() {
-                    @Override
-                    public void run() {
-                        submitData();
-                    }
-                });
+                Bukkit.getScheduler().runTask(plugin, () -> submitData());
             }
         }, 1000*60*5, 1000*60*30);
         // Submit the data every 30 minutes, first time after 5 minutes to give other plugins enough time to start
@@ -246,17 +243,14 @@ public class Metrics {
         data.put("plugins", pluginData);
 
         // Create a new thread for the connection to the bStats server
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    // Send the data
-                    sendData(data);
-                } catch (Exception e) {
-                    // Something went wrong! :(
-                    if (logFailedRequests) {
-                        plugin.getLogger().log(Level.WARNING, "Could not submit plugin stats of " + plugin.getName(), e);
-                    }
+        new Thread(() -> {
+            try {
+                // Send the data
+                sendData(data);
+            } catch (Exception e) {
+                // Something went wrong! :(
+                if (logFailedRequests) {
+                    plugin.getLogger().log(Level.WARNING, "Could not submit plugin stats of " + plugin.getName(), e);
                 }
             }
         }).start();
@@ -312,7 +306,7 @@ public class Metrics {
         }
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         GZIPOutputStream gzip = new GZIPOutputStream(outputStream);
-        gzip.write(str.getBytes("UTF-8"));
+        gzip.write(str.getBytes(StandardCharsets.UTF_8));
         gzip.close();
         return outputStream.toByteArray();
     }
@@ -421,7 +415,7 @@ public class Metrics {
         protected JSONObject getChartData() {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
-            HashMap<String, Integer> map = getValues(new HashMap<String, Integer>());
+            HashMap<String, Integer> map = getValues(new HashMap<>());
             if (map == null || map.isEmpty()) {
                 // Null = skip the chart
                 return null;
@@ -505,7 +499,7 @@ public class Metrics {
         protected JSONObject getChartData() {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
-            HashMap<String, Integer> map = getValues(new HashMap<String, Integer>());
+            HashMap<String, Integer> map = getValues(new HashMap<>());
             if (map == null || map.isEmpty()) {
                 // Null = skip the chart
                 return null;
@@ -555,7 +549,7 @@ public class Metrics {
         protected JSONObject getChartData() {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
-            HashMap<String, Integer> map = getValues(new HashMap<String, Integer>());
+            HashMap<String, Integer> map = getValues(new HashMap<>());
             if (map == null || map.isEmpty()) {
                 // Null = skip the chart
                 return null;
@@ -598,7 +592,7 @@ public class Metrics {
         protected JSONObject getChartData() {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
-            HashMap<String, int[]> map = getValues(new HashMap<String, int[]>());
+            HashMap<String, int[]> map = getValues(new HashMap<>());
             if (map == null || map.isEmpty()) {
                 // Null = skip the chart
                 return null;
@@ -688,7 +682,7 @@ public class Metrics {
         protected JSONObject getChartData() {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
-            HashMap<Country, Integer> map = getValues(new HashMap<Country, Integer>());
+            HashMap<Country, Integer> map = getValues(new HashMap<>());
             if (map == null || map.isEmpty()) {
                 // Null = skip the chart
                 return null;
