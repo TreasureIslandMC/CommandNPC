@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import org.bukkit.command.CommandSender;
 
 import me.messageofdeath.commandnpc.CommandNPC;
-import me.messageofdeath.commandnpc.Database.ClickType;
-import me.messageofdeath.commandnpc.Database.LanguageSettings.LanguageSettings;
-import me.messageofdeath.commandnpc.Database.PluginSettings.PluginSettings;
+import me.messageofdeath.commandnpc.database.ClickType;
+import me.messageofdeath.commandnpc.database.LanguageSettings.LanguageSettings;
+import me.messageofdeath.commandnpc.database.PluginSettings.PluginSettings;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCCommand;
 import me.messageofdeath.commandnpc.NPCDataManager.NPCData;
-import me.messageofdeath.commandnpc.Utilities.Utilities;
+import me.messageofdeath.commandnpc.utilities.Utilities;
 import net.citizensnpcs.api.command.Command;
 import net.citizensnpcs.api.command.CommandContext;
 import net.citizensnpcs.api.command.Requirements;
